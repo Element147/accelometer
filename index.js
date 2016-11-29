@@ -1,6 +1,6 @@
 var watchID;
 var accelerometerOptions = { frequency: 2000 };  // Update every 2 seconds
-//accelerometerOptions.frequency = 3000; //changed my mind - now 3 seconds
+accelerometerOptions.frequency = 3000; //changed my mind - now 3 seconds
 
 
 //when the page is created...
@@ -55,8 +55,15 @@ function accelerometerError() {
    alert('Error');
 }
 
+//setup listener for the toggle switch
+	$("#slider").on("change", function() {
+		
+		if( $(this).val() == "on" ) accelerometerOptions.frequency = value;
+
+	});
+
 function updateFreq(freq) {
-	//do something to update freq. here.
+
 }
 
 
