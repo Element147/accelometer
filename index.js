@@ -55,15 +55,9 @@ function accelerometerError() {
    alert('Error');
 }
 
-//setup listener for the toggle switch
-	$("#slider").on("change", function() {
-		
-		if( $(this).val() == "on" ) accelerometerOptions.frequency = value;
-
-	});
 
 function updateFreq(freq) {
-
+accelerometerOptions.frequency = freq;
 }
 
 
