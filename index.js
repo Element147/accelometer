@@ -57,7 +57,9 @@ function accelerometerError() {
 
 
 function updateFreq(freq) {
+     stopSensor();
 accelerometerOptions.frequency = freq;
+startSensor();
 }
 
 
